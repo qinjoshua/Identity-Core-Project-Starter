@@ -49,11 +49,11 @@ For this guide, we’ll be adding these four custom fields to our application us
 ### Create Project with Identity Core
 Create a new ASP.NET Core application and select MVC as the desired application template. In the same window, click on the “Change Authentication” button.
 
-<placeholder figure 1>
+![Figure 1](https://github.com/qinjoshua/IdentityCoreProjectStarter/blob/main/Screenshots/Figure1.png)
 
 Select Individual User Accounts in the “Change Authentication” window, which will setup Identity Core automatically when the project template is created.
 
-<placeholder figure 2>
+![Figure 1](https://github.com/qinjoshua/IdentityCoreProjectStarter/blob/main/Screenshots/Figure2.png)
 
 ### Add Custom Application User
 Under the "Models" folder, create a new class called `ApplicationUser` and inherit the `Identity` class. The `ApplicationUser` class will represent the customized user for this application. Add the custom fields that you would like to include in registration to this `ApplicationUser` class.
@@ -124,7 +124,7 @@ public void ConfigureServices(IServiceCollection services)
 
 Now we can add our model migrations so that our ApplicationUser's custom fields are reflected in the database. To do so, go to the Package Manager Console and type `Add-Migration ApplicationUser` followed by `Update-Database`
 
-<placeholder figure 6>
+![Figure 1](https://github.com/qinjoshua/IdentityCoreProjectStarter/blob/main/Screenshots/Figure3.png)
 
 Finally, in "_LoginPartial.cshtml", replace `IdentityUser` with your new `ApplicationUser`.
 
@@ -139,7 +139,7 @@ For this project, we'll be using MailKit by Jeffry Steadfast to send the authent
 
 In the toolbar, click Project → Manage NuGet Packages..., and then click on "Browse." Search for the MailKit package, and then click "Install." Click "Ok" for any install prompts that come up. This should add the MailKit package into your project
 
-<placeholder figure 7>
+![Figure 1](https://github.com/qinjoshua/IdentityCoreProjectStarter/blob/main/Screenshots/Figure4.png)
 
 Create a new folder "Services" in your project. Add an interface called `EmailSettings` in your newly created "Services" folder, and add the following code:
 
@@ -254,7 +254,7 @@ public void ConfigureServices(IServiceCollection services)
 ### Scaffold Identity Core
 We would like to be able to modify our identity-related pages in order to customzie the user interface and add in custom fields on the frontend to match the custom fields we added in our model. Right click project and click Add → New Scaffolded Item…
 
-<placeholder figure 3>
+![Figure 1](https://github.com/qinjoshua/IdentityCoreProjectStarter/blob/main/Screenshots/Figure5.png)
 
 On the left-hand pane, click Identity. Select Identity from the list of scaffolding options. Check the following options to add to your project:
 
@@ -266,11 +266,11 @@ Account\Register
 
 Select `ApplicationDbContext` from the dropdown next to “Data context class”, and then press the “Add” button to add the Identity files to your project
 
-<placeholder figure 4>
+![Figure 1](https://github.com/qinjoshua/IdentityCoreProjectStarter/blob/main/Screenshots/Figure6.png)
 
 The files should be added to the project under the “Areas” folder.
 
-<placeholder figure 5>
+![Figure 1](https://github.com/qinjoshua/IdentityCoreProjectStarter/blob/main/Screenshots/Figure7.png)
 
 If you would like to modify the look and feel of any of the registration pages, it can be done from within this folder.
 
