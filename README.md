@@ -7,26 +7,43 @@ ASP.NET Identity Core is the built-in and solution for individual user accounts 
 By default, Identity Core will have the following fields:
 
 `Id` – A GUID string that acts as the primary key for the user account
+
 `UserName` – Unique string that identifies the user for login
+
 `NormalizedUserName` – Username with letters normalized to uppercase characters
+
 `Email` – The user’s email address
+
 `NormalizedEmail` – Email with letters normalized to uppercase characters
+
 `EmailConfirmed` – A boolean determining whether or not the user’s email address has been confirmed
+
 `PasswordHash` – The hashed version of the password used for comparison when the user is authenticated
+
 `SecurityStamp` – A GUID string that represents the current snapshot of the user credentials; used for disabling old authentication cookies, allowing the user to sign out of their account everywhere simultaneously
+
 `ConcurrencyStamp` – Used to prevent concurrent update conflicts, by identifying if the database has changed since the page was loaded
+
 `PhoneNumber` – The user’s phone number
+
 `PhoneNumberConfirmed` – A boolean determining whether or not the user’s phone number has been confirmed
+
 `TwoFactorEnabled` – A boolean representing whether or not two factor authentication has been enabled
+
 `LockoutEnd` – When the lockout period on a user account will end, after too many incorrect password `attempts` – null if the user is not locked out
+
 `LockoutEnabled` – A boolean representing whether or not a user will be locked out after too many incorrect password attempts
+
 `AccessFailedCount` – The number of incorrect login attempts the user has committed so far
 
 For this guide, we’ll be adding these four custom fields to our application user:
 
 `FirstName` – The user’s first name
+
 `LastName` – The user’s last name
+
 `Birthday` – A date representing the user’s birthday
+
 `Country` – The country that the user resides in
 
 ### Create Project with Identity Core
