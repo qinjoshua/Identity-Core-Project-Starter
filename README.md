@@ -1,5 +1,5 @@
 # ASP.NET Identity Core Project Starter
-## With Custom Fields and Email Authentication
+With Custom Fields and Email Authentication
 
 ### Introduction
 ASP.NET Identity Core is the built-in and solution for individual user accounts and authentication in ASP.NET MVC Core, Microsoft’s cross-platform implementation of the ASP.NET MVC web framework. We will add custom user fields to a new project using Identity Core, customize the user interface to support these additional fields, and add email confirmation to create a comprehensive Identity authentication system that can be integrated with any ASP.NET MVC Core project. We will be using Visual Studio 2017 for this guide.
